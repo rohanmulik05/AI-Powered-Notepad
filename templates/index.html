@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Notepad</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to AI Notepad</h2>
+    <textarea id="note" placeholder="Write your thoughts..."></textarea>
+    <button onclick="saveNote()">Save</button>
+    <button onclick="analyzeNote()">Analyze</button>
+    <button onclick="logout()">Logout</button>
+    <div id="result"></div>
+    <h3>Previous Notes</h3>
+    <ul>
+      {% for note in notes %}
+      <li>{{ note[0] }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
